@@ -1,0 +1,157 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 5;
+    }
+
+    .header__logo-img {
+        width: 120px;
+    }
+
+    .container {
+        margin-top: calc(var(--header-height) + var(--header-search-bar));
+    }
+
+    .header__cart-list {
+        position: fixed;
+        width: 100%;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .header-search-bar {
+        display: flex;
+    }
+
+    .container_content {
+        padding-top: 4px;
+    }
+
+    .mobile-category {
+        display: flex;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+}
+
+/* Moblie */
+@media (max-width: 739px) {
+    
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header__search {
+        justify-content: space-between;
+    }
+
+    .header__cart,
+    .header__logo {
+        width: unset;
+    }
+
+    .header__search-input {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-search);
+        z-index: 2;
+        height: var(--header-search-bar);
+        padding: 0 16px;
+        animation: mobileSearch linear 0.2s;
+        display: none;
+    }
+
+    .header__search-mobile  {
+        display: block;
+    }
+
+    .pagination-item-link {
+        min-width: 40px;
+    }
+
+    .pagination-item {
+        margin: 0;
+    }
+
+    .header-search-bar--item-link {
+        line-height: 16px;
+    }
+    
+    .container_content {
+        margin: 0;
+    }
+
+    .footer__content {
+        padding: 16px 32px;
+    }
+
+    .footer-heading {
+        text-align: center;
+    }
+
+    .footer-item-link {
+        text-align: center;
+    }
+
+    .footer-download {
+        flex: unset;
+        justify-content: center;
+    }
+
+    .home__product-sele-off-label {
+        display: block;
+        font-size: 1.2rem;
+        margin-top: -8px;
+    }
+
+
+
+    @keyframes mobileSearch {
+        from {
+            height: 0;
+            opacity: 0;
+        }   
+        to {
+            height: var(--header-search-bar);
+            opacity: 1;
+        }
+    }
+}
